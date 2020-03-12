@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <template v-if="ifshow">
+        <h1>hello vue</h1>
+        <h2> hello java</h2>
+        <p>hheheh</p>
+    </template>
+    <div v-else> www.shrbank.com</div>
+
+    性别
+    <div v-if="gender==0">男</div>
+    <div v-else-if="gender==1">女</div>
+    <div v-else>未知</div>
+    <template v-if="type=='username'">
+        用户名:
+        <input type="text" placeholder="请输入用户名" key="aa">
+    </template>
+    <template v-else>
+        用户名:
+        <input type="text" placeholder="请输入邮箱" key="bb">
+    </template>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            msg: "hello java",
+            ifshow: true,
+            gender: 0,
+            type: 'username'
+        }
+    })
+</script>
+</body>
+</html>

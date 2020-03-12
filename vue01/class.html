@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+<!--    <div v-bind:class="{icon:flag,icon1:border}">{{msg}}</div>-->
+    <div v-bind:class="classObj">{{msg}}</div>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            msg: "hell java",
+            flag: true,
+            border: true,
+            classObj: {
+                icon: true,
+                icon1: false
+            }
+        }
+    })
+</script>
+<style>
+    .icon {
+        font-weight: bold;
+        color: #e196ff;
+    }
+
+    .icon1 {
+        border: 1px;
+    }
+
+</style>
+</body>
+</html>

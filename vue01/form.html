@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="message">
+    <div>{{message}}</div>
+    <textarea v-model="text" cols="30" rows="10"></textarea>
+    <div>{{text}}</div>
+    <hr>
+    <input type="checkbox" v-model="isRead">
+    {{isRead}}
+    <hr>
+    <input type="checkbox" value="篮球" v-model="ins">篮球
+    <input type="checkbox" value="足球" v-model="ins">足球
+    <input type="checkbox" value="排球" v-model="ins">派遣
+    <div>{{ins}}</div>
+    <hr>
+    学历<select v-model="rank">
+    <option value="小学" >小学</option>
+    <option value="初中">初中</option>
+    <option value="高中">高中</option>
+    <option value="大学">大学</option>
+</select>
+    <div>{{rank}}</div>
+    <hr>
+    <select v-model="attr" multiple>
+        <option value="战士">战士</option>
+        <option value="法师">法师</option>
+        <option value="打野">大野</option>
+    </select>
+    <div>{{attr}}</div>
+</div>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: '',
+            text: '',
+            isRead: false,
+            ins: [],
+            rank: '小学',
+            attr:[]
+        },
+    })
+</script>
+</body>
+</html>

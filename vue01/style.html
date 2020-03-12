@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div v-bind:style="{color:clor,fontSize:font+'px'}">{{msg}}</div>
+    <div v-bind:style="styleObj">{{msg}}</div>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            msg: "hello java",
+            font: 30,
+            clor: 'red',
+            styleObj:{
+                fontSize: 30+'px',
+                color: 'red'
+            }
+        }
+    })
+</script>
+</body>
+</html>

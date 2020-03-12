@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <javaboy></javaboy>
+    <h1>哈哈</h1>
+</div>
+<script>
+    Vue.component = ('javaboy', {
+        data() {
+            return {
+                count:0
+            }
+        },
+        template: '<button v-on:click="count++"> hello{{count}}</button>'
+    });
+    var app = new Vue({
+        el: '#app',
+        data: {
+
+        }
+    })
+</script>
+</body>
+</html>

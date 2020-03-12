@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <table border="1">
+        <tr>
+            <td>序号</td>
+            <td>书籍</td>
+            <td>作者</td>
+        </tr>
+        <tr v-for="(book,index) in books" v-bind:key="index">
+            <td>{{index}}</td>
+            <td>{{book.auth}}</td>
+            <td>{{book.name}}</td>
+        </tr>
+    </table>
+    <hr>
+    <div v-for="(s,property,index) in site " v-bind:key="index">{{property}}-----{{s}}---{{index}}</div>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            books: [
+                {
+                    auth: "罗贯中",
+                    name: "三国演义"
+                },
+                {
+                    auth: "施耐庵",
+                    name: "水浒传"
+                },
+                {
+                    auth: "曹雪芹",
+                    name: "红楼梦"
+                },
+                {
+                    auth: "吴承恩",
+                    name: "西游记"
+                }
+            ],
+            site: {
+                url: 'www,baidu.com',
+                name: '江南一点与',
+                server: 'github'
+            }
+        }
+    })
+</script>
+</body>
+</html>
